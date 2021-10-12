@@ -5,7 +5,7 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 path_to_projects_dir='/home/arturjah/Music'
-template_name='CLEAN-TEMPLATE'
+template_name='!CLEAN_TEMPLATE'
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -44,7 +44,7 @@ if [ -d "${path_to_clean_template}" ]; then
 
     echo "--- NEW PROJECT ${project_name} HAS BEEN CREATED ---"
     echo "--- START CUBASE ---"
-    open "${path_to_new_project}/${project_name}.cpr" -a cubase
+    open "${path_to_new_project}/${project_name}.cpr" -a '/Applications/Cubase 11.app'
 else
     echo "--- THERE IS NO DIRECTORY WITH TEMPLATE ---"
 fi

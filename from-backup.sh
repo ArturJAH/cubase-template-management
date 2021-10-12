@@ -6,7 +6,7 @@
 
 path_to_projects_dir='/home/arturjah/Music'
 path_to_backups_dir='/home/arturjah/Music/BACKUPS'
-clean_template_name='CLEAN-TEMPLATE'
+clean_template_name='!CLEAN_TEMPLATE'
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -60,7 +60,7 @@ if [ -d "${path_to_backups_dir}" ]; then
 
     echo "--- NEW PROJECT ${project_name} HAS BEEN CREATED FROM BACKUP ${backup} ---"
     echo "--- START CUBASE ---"
-    open "${path_to_new_project}/${project_name}.cpr" -a cubase
+    open "${path_to_new_project}/${project_name}.cpr" -a '/Applications/Cubase 11.app'
 else
     echo "--- THERE IS NO BACKUPS DIRECTORY ---"
 fi

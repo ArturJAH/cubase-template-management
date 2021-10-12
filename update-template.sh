@@ -6,8 +6,8 @@
 
 path_to_projects_dir='/home/arturjah/Music'
 path_to_backups_dir='/home/arturjah/Music/BACKUPS'
-raw_template_name='RAW-TEMPLATE'
-clean_template_name='CLEAN-TEMPLATE'
+raw_template_name='!RAW_TEMPLATE'
+clean_template_name='!CLEAN_TEMPLATE'
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -41,7 +41,7 @@ if [ -d "${path_to_raw_template}" ]; then
     rm -rf ${path_to_clean_template}/Audio/*
 
     echo "--- START CUBASE ---"
-    open "${path_to_clean_template}/${raw_template_name}.cpr" -a cubase
+    open "${path_to_clean_template}/${clean_template_name}.cpr" -a '/Applications/Cubase 11.app'
 else
     echo "--- THERE IS NO DIRECTORY WITH RAW TEMPLATE ---"
 fi
